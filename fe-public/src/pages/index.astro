@@ -9,6 +9,7 @@ import SidewaysHeader from "../components/SidewaysHeader.astro";
 import DarkMode from "../components/DarkMode.astro";
 import Calendar from "../components/Calendar.astro";
 import Footer from "../components/Footer.astro";
+import RosterGallery from "../components/RosterGallery.astro";
 import loadLocale from '../scripts/locale.js';
 let l = loadLocale("en");
 
@@ -36,7 +37,7 @@ const navBarLength = 10;
             <SidewaysHeader title="club.about"></SidewaysHeader>
             <AboutInfo></AboutInfo>
         </div>
-        <p style="padding-top: 200px;"></p>
+        <RosterGallery />
         <div style="position:relative;">
             <SidewaysHeader title="club.scoreboard"></SidewaysHeader>
             <Scoreboard></Scoreboard>
@@ -44,10 +45,10 @@ const navBarLength = 10;
         <div>
             <WordCloud></WordCloud>
         </div>
+      <Calendar></Calendar>
     </div>
-    <Calendar></Calendar>
-    <div class="my-32"/>
-    <Footer />
+    <div class="mt-32">
+      <Footer />
     </div>
 
 </Layout>
@@ -72,10 +73,10 @@ const navBarLength = 10;
     .hover-3 {
   --b: 0.1em;   /* the thickness of the line */
   --c: #1095c1; /* the color */
-  
+
   /* color: #0000; */
   padding-block: var(--b);
-  background: 
+  background:
     linear-gradient(var(--c) 50%,#000 0) 0% calc(100% - var(--_p,0%))/100% 200%,
     linear-gradient(var(--c) 0 0) 0% var(--_p,0%)/var(--_p,0%) var(--b) no-repeat;
   -webkit-background-clip: text,padding-box;
